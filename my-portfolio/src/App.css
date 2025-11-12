@@ -1,0 +1,394 @@
+/* 🌐 General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #f9fafb, #eef2f3);
+  color: #333;
+  overflow-x: hidden;
+}
+
+.App {
+  text-align: center;
+  scroll-behavior: smooth;
+}
+
+/* ===================== */
+/* 🔷 Navbar Section */
+/* ===================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #1e1e2f, #f7f7ff);
+  color: white;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 8px rgba(241, 241, 244, 0.1);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #00e5ff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li {
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links li::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #00e5ff;
+  left: 0;
+  bottom: -4px;
+  transition: 0.3s ease;
+}
+
+.nav-links li:hover::after {
+  width: 100%;
+}
+
+.nav-links li:hover {
+  color: #00e5ff;
+}
+
+/* ===================== */
+/* 🏠 Home Section */
+/* ===================== */
+.home {
+  padding: 100px 20px;
+  background: linear-gradient(180deg, #f0f4f8, #e8eef3);
+  text-align: center;
+}
+
+.home h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #222222;
+}
+
+.home p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 600px;
+  margin: 10px auto;
+}
+
+.btn {
+  margin-top: 30px;
+  padding: 12px 25px;
+  background: linear-gradient(90deg, #00bcd4, #0097a7);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #0097a7, #00bcd4);
+}
+
+/* ===================== */
+/* 👩‍💻 About Section */
+/* ===================== */
+.about {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.about h2 {
+  font-size: 2.3rem;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.about p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ===================== */
+/* 💪 Skills Section */
+/* ===================== */
+.skills {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #ffffff, #f3f8fb);
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 2.3rem;
+  margin-bottom: 25px;
+  color: #111;
+}
+
+.skills-container {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.skill-bar {
+  margin-bottom: 25px;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.progress {
+  background-color: #e0e0e0;
+  border-radius: 20px;
+  height: 12px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.progress-fill {
+  background: linear-gradient(90deg, #00bcd4, #007bff);
+  height: 100%;
+  border-radius: 20px;
+  transition: width 0.6s ease;
+}
+
+/* ===================== */
+/* 📁 Projects Section */
+/* ===================== */
+.projects {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #f8fafc;
+}
+
+.projects h2 {
+  font-size: 2.3rem;
+  color: #111;
+  margin-bottom: 30px;
+}
+
+.project-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.project-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  width: 270px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+  color: #00bcd4;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ===================== */
+/* 🎓 Education Section */
+/* ===================== */
+.education {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #f9f9f9, #eef3f6);
+  text-align: center;
+}
+
+.education h2 {
+  font-size: 2.3rem;
+  margin-bottom: 25px;
+  color: #111;
+}
+
+.edu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.edu-card {
+  background-color: white;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 550px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.edu-card:hover {
+  transform: scale(1.03);
+}
+
+.edu-card h3 {
+  color: #007bff;
+  margin-bottom: 5px;
+}
+
+.edu-card p {
+  color: #444;
+  margin: 5px 0;
+}
+
+.edu-card span {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* ===================== */
+/* 📞 Contact Section */
+/* ===================== */
+.contact {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.contact h2 {
+  font-size: 2.3rem;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.contact p {
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.contact a {
+  display: inline-block;
+  padding: 12px 25px;
+  background: linear-gradient(90deg, #00bcd4, #0097a7);
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.contact a:hover {
+  transform: scale(1.05);
+}
+
+/* ===================== */
+/* 🖤 Footer Section */
+/* ===================== */
+.footer {
+  background: linear-gradient(90deg, #1e1e2f, #282846);
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px 20px;
+  margin-top: 50px;
+}
+
+.footer-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+  color: #00e5ff;
+}
+
+.footer-content p {
+  font-size: 1rem;
+  color: #807831;
+  margin-bottom: 15px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.social-links a {
+  color: #87c51c;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #00e5ff;
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  border-top: 1px solid #0c0909;
+  padding-top: 10px;
+  font-size: 0.9rem;
+  color: #eaa9a9;
+}
+
+/* ===================== */
+/* 📱 Responsive */
+/* ===================== */
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 15px;
+    font-size: 0.9rem;
+  }
+
+  .home h1 {
+    font-size: 2.2rem;
+  }
+
+  .skills-container, .edu-card {
+    width: 90%;
+  }
+
+  .project-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 85%;
+  }
+}
